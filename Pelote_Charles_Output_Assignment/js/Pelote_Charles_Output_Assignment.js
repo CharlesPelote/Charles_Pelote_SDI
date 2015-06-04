@@ -6,5 +6,7 @@
  * Assignment: Output Assignment
  */
 
+var myFirstName = "Charles";
 
+console.log("My name is ", myFirstName);
 alert("Testing 1, 2, 3 ");
