@@ -6,7 +6,10 @@
  * Assignment: Output Assignment
  */
 
-var myFirstName = "Charles";
+var myFirstName = "Charles ";
+var myMiddleInitial = "H ";
+var myLastName = "Pelote ";
+var mySuffix = "II ";
 
-console.log("My name is ", myFirstName);
-alert("Testing 1, 2, 3 ");
+console.log("My full name is ", myFirstName, myMiddleInitial, myLastName, mySuffix);
+alert("Click OK if you think this assignment was super awesome!!!");
