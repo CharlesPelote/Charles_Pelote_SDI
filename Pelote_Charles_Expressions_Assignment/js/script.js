@@ -36,10 +36,14 @@ if (shape == "3") //trapezoid
 
     answer = (Number(numbersArray[0]) + Number(numbersArray[1])) * Number(numbersArray[2])/2;
 }
+
 if (shape == "4") //square
 {
-    answer = Number(inputNumbersArray[0]) / Number(inputNumbersArray[1]);
+    numbersArray[0] = prompt("What is the length of one side of the square in inches?"); // length of one side of square
+
+    answer = Number(numbersArray[0]) * Number(numbersArray[0]);
 }
+
 if (shape == "5") //rectangle
 {
     answer = Number(inputNumbersArray[0]) / Number(inputNumbersArray[1]);
