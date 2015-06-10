@@ -7,6 +7,8 @@
  */
 
 //var operationsArray = ["+", "-", "*", "/"];
+var shape = prompt("Choose one shape: \n1 = semi-circle\n2 = triangel\n3 = trapezoid\n4=square\n5=rectangle");
+alert(shape);
 var operation = prompt("Choose one operation: +, -, * or /");
 //var inputNumbersArray = [number1, number2];
 var number1 = prompt("Enter the first number to " + operation);
@@ -15,21 +17,25 @@ var number3 = prompt("Enter the third number");
 var inputNumbersArray = [number1, number2];
 var answer = " ";
 //alert(operation);
-alert(number1 + operation + number2);
+//alert(number1 + operation + number2);
 
-if (operation == "+")
+if (shape == "1")
 {
     answer = Number(inputNumbersArray[0]) + Number(inputNumbersArray[1]);
 }
-if (operation == "-")
+if (shape == "2")
 {
     answer = Number(inputNumbersArray[0]) - Number(inputNumbersArray[1]);
 }
-if (operation == "*")
+if (shape == "3")
 {
     answer = Number(inputNumbersArray[0]) * Number(inputNumbersArray[1]);
 }
-if (operation == "/")
+if (shape == "4")
+{
+    answer = Number(inputNumbersArray[0]) / Number(inputNumbersArray[1]);
+}
+if (shape == "5")
 {
     answer = Number(inputNumbersArray[0]) / Number(inputNumbersArray[1]);
 }
