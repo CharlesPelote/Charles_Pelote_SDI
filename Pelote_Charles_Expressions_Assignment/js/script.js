@@ -11,6 +11,7 @@ var operation = prompt("Choose one operation: +, -, * or /");
 //var inputNumbersArray = [number1, number2];
 var number1 = prompt("Enter the first number to " + operation);
 var number2 = prompt("Enter the second number");
+var number3 = prompt("Enter the third number");
 var inputNumbersArray = [number1, number2];
 var answer = " ";
 //alert(operation);
@@ -33,3 +34,5 @@ if (operation == "/")
     answer = Number(inputNumbersArray[0]) / Number(inputNumbersArray[1]);
 }
 alert(answer);
+console.log(number1 + " " + operation + " " + number2 + " = " + answer);
+alert(number1 + " " + operation + " " + number2 + " = " + answer);
