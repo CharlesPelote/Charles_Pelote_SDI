@@ -8,27 +8,28 @@
 
 //var operationsArray = ["+", "-", "*", "/"];
 var operation = prompt("Choose one operation: +, -, * or /");
-//var inputNumbersArray = ;
+//var inputNumbersArray = [number1, number2];
 var number1 = prompt("Enter the first number to " + operation);
 var number2 = prompt("Enter the second number");
-
+var inputNumbersArray = [number1, number2];
+var answer = " ";
 //alert(operation);
 alert(number1 + operation + number2);
 
 if (operation == "+")
 {
-    var answer = Number(number1) + Number(number2);
+    answer = Number(inputNumbersArray[0]) + Number(inputNumbersArray[1]);
 }
 if (operation == "-")
 {
-    var answer = Number(number1) + Number(number2);
+    answer = Number(inputNumbersArray[0]) - Number(inputNumbersArray[1]);
 }
 if (operation == "*")
 {
-    var answer = Number(number1) + Number(number2);
+    answer = Number(inputNumbersArray[0]) * Number(inputNumbersArray[1]);
 }
 if (operation == "/")
 {
-    var answer = Number(number1) + Number(number2);
+    answer = Number(inputNumbersArray[0]) / Number(inputNumbersArray[1]);
 }
 alert(answer);
