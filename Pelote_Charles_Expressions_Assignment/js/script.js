@@ -15,22 +15,26 @@ if (shape == "1") // semi-circle
 {
     var pie = 3.14;
 
-    numbersArray[shape - 1] = prompt("What is the radius in inches?");
+    numbersArray[0] = prompt("What is the radius in inches?");
 
     answer = pie * (Number(numbersArray[shape - 1]) * Number(numbersArray[shape - 1]))/2;
 }
 
 if (shape == "2") // triangle
 {
-    numbersArray[shape - 1] = prompt("What is the base in inches?");   // base
-    numbersArray[shape]     = prompt("What is the height in inches?"); // height
+    numbersArray[0] = prompt("What is the base in inches?");   // base
+    numbersArray[1] = prompt("What is the height in inches?"); // height
 
-    answer = Number(numbersArray[shape - 1]) * Number(numbersArray[shape])/2;
+    answer = Number(numbersArray[0]) * Number(numbersArray[1])/2;
 }
 
 if (shape == "3") //trapezoid
 {
-    answer = Number(inputNumbersArray[0]) * Number(inputNumbersArray[1]);
+    numbersArray[0] = prompt("What is the width of the top in inches?");   // width of the top
+    numbersArray[1] = prompt("What is the width of the bottom in inches?"); // width of the bottom
+    numbersArray[2] = prompt("What is the height in inches?"); // height
+
+    answer = (Number(numbersArray[0]) + Number(numbersArray[1])) * Number(numbersArray[2])/2;
 }
 if (shape == "4") //square
 {
