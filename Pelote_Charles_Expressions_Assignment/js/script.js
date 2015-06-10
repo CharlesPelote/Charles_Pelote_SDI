@@ -6,51 +6,52 @@
  * Assignment: Expressions Assignment
  */
 
-var answer;
-var numbersArray = [0, 0 ,0];
-var shapeArray = ["semi-circle", "triangle", "trapezoid", "square", "rectangle"];
+var answer;                      // answer will hold the area of the choose objects.
+var numbersArray = [0, 0 ,0];    // an array to hold the numbers input by the user.
+var shapeArray = ["semi-circle", "triangle", "trapezoid", "square", "rectangle"];    // an array to hold the names of the shapes.
+                                 // user chooses the shape by picking a number and the choice is saved in variable shape.
 var shape = prompt("Choose one shape: \n1 = semi-circle\n2 = triangle\n3 = trapezoid\n4 = square\n5 = rectangle");
 
-if (shape == "1") // semi-circle
+if (shape == "1") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
-    var pie = 3.14;
+    var pi = 3.14;
 
-    numbersArray[0] = prompt("What is the radius of the semi-circle in inches?");
+    numbersArray[0] = prompt("What is the radius of the semi-circle in inches?"); // takes the users radius and puts it in the array
 
-    answer = pie * (Number(numbersArray[shape - 1]) * Number(numbersArray[shape - 1]))/2;
+    answer = pi * (Number(numbersArray[shape - 1]) * Number(numbersArray[shape - 1]))/2; // calculates the area and puts it in answer
 }
 
-if (shape == "2") // triangle
+if (shape == "2") // the user chose 2 which is the triangle.  the if statement only does the following code if shape is equal to two.
 {
-    numbersArray[0] = prompt("What is the base of the triangle in inches?");   // base
-    numbersArray[1] = prompt("What is the height of the triangle in inches?"); // height
+    numbersArray[0] = prompt("What is the base of the triangle in inches?");   // takes the users base and puts it in the array
+    numbersArray[1] = prompt("What is the height of the triangle in inches?"); // takes the users height and puts it in the array
 
-    answer = Number(numbersArray[0]) * Number(numbersArray[1])/2;
+    answer = Number(numbersArray[0]) * Number(numbersArray[1])/2;  // calculates the area and puts it in answer
 }
 
-if (shape == "3") //trapezoid
+if (shape == "3") // the user chose 3 which is the trapezoid.  the if statement only does the following code if shape is equal to three.
 {
-    numbersArray[0] = prompt("What is the width of the top of the trapezoid in inches?");   // width of the top
-    numbersArray[1] = prompt("What is the width of the bottom of the trapezoid in inches?"); // width of the bottom
-    numbersArray[2] = prompt("What is the height of the trapezoid in inches?"); // height
+    numbersArray[0] = prompt("What is the width of the top of the trapezoid in inches?");   // takes the width of the top and puts it in the array
+    numbersArray[1] = prompt("What is the width of the bottom of the trapezoid in inches?"); // takes the width of the bottom and puts it in the array
+    numbersArray[2] = prompt("What is the height of the trapezoid in inches?"); // takes the height and puts it in the array
 
-    answer = (Number(numbersArray[0]) + Number(numbersArray[1])) * Number(numbersArray[2])/2;
+    answer = (Number(numbersArray[0]) + Number(numbersArray[1])) * Number(numbersArray[2])/2;  // calculates the area and puts it in answer
 }
 
-if (shape == "4") //square
+if (shape == "4") // the user chose 4 which is the square.  the if statement only does the following code if shape is equal to four.
 {
-    numbersArray[0] = prompt("What is the length of one side of the square in inches?"); // length of one side of square
+    numbersArray[0] = prompt("What is the length of one side of the square in inches?"); // takes the length of one side of square and puts it in the array
 
-    answer = Number(numbersArray[0]) * Number(numbersArray[0]);
+    answer = Number(numbersArray[0]) * Number(numbersArray[0]);  // calculates the area and puts it in answer
 }
 
-if (shape == "5") //rectangle
+if (shape == "5") // the user chose 5 which is the rectangle.  the if statement only does the following code if shape is equal to five.
 {
-    numbersArray[0] = prompt("What is the width of the rectangle in inches?"); // width
-    numbersArray[1] = prompt("What is the height of the rectangle in inches?"); // height
+    numbersArray[0] = prompt("What is the width of the rectangle in inches?"); // takes the width and puts it in the array
+    numbersArray[1] = prompt("What is the height of the rectangle in inches?"); // takes the height and puts it in the array
 
-    answer = Number(numbersArray[0]) * Number(numbersArray[1]);
+    answer = Number(numbersArray[0]) * Number(numbersArray[1]);  // calculates the area and puts it in answer
 }
 
-console.log("The area of a " + shapeArray[shape - 1] + " is " + answer + " inches");
-alert("The area of a " + shapeArray[shape - 1] + " is " + answer + " inches squared.");
+console.log("The area of a " + shapeArray[shape - 1] + " is " + answer + " inches");  // outputs a string to the console
+alert("The area of a " + shapeArray[shape - 1] + " is " + answer + " inches squared."); // outputs a string to the user
