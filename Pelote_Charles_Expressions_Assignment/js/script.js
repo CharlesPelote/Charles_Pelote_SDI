@@ -20,7 +20,7 @@ do        // this loop will continue to run until the user enters the correct in
     {
         test = true; // when the user gets it right we set test to true and move out of the loop
     }
-} while(test == false)
+} while(test == false);
 
 if (shape == "1") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
@@ -64,4 +64,4 @@ if (shape == "5") // the user chose 5 which is the rectangle.  the if statement 
 }
 
 console.log("The area of a " + shapeArray[shape - 1] + " is " + answer + " inches");  // outputs a string to the console
-alert("The area of a " + shapeArray[shape - 1] + " is " + answer + " inches squared."); // outputs a string to the user
+alert("The area of the " + shapeArray[shape - 1] + " is " + answer + " inches squared."); // outputs a string to the user
