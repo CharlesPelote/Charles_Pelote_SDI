@@ -9,8 +9,18 @@
 var answer;                      // answer will hold the area of the choose objects.
 var numbersArray = [0, 0 ,0];    // an array to hold the numbers input by the user.
 var shapeArray = ["semi-circle", "triangle", "trapezoid", "square", "rectangle"];    // an array to hold the names of the shapes.
-                                 // user chooses the shape by picking a number and the choice is saved in variable shape.
-var shape = prompt("Choose one shape: \n1 = semi-circle\n2 = triangle\n3 = trapezoid\n4 = square\n5 = rectangle");
+var shape = "0";                 // user chooses the shape by picking a number and the choice is saved in variable shape.
+var test  = false;               // test variable used to hold a boolean set to false.
+
+do        // this loop will continue to run until the user enters the correct information, numbers 1-5.
+{         // user enters one number to reflect the corresponding shape.
+    shape = prompt("Choose one shape: \n1 = semi-circle\n2 = triangle\n3 = trapezoid\n4 = square\n5 = rectangle");
+
+    if(shape == 1 || shape == 2 || shape == 3 || shape == 4 || shape == 5) // if user enters something else repeat the question.
+    {
+        test = true; // when the user gets it right we set test to true and move out of the loop
+    }
+} while(test == false)
 
 if (shape == "1") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
