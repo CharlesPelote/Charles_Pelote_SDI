@@ -39,49 +39,97 @@ if (shape == "1") // the user chose 1 which is the sphere.  the if statement onl
 
 if (shape == "2") // the user chose 2 which is the cube.  the if statement only does the following code if shape is equal to two.
 {
-    numbersArray[0] = Number(prompt("What is the length of one side of the cube?"));   // takes the users base and puts it in the array
+    do
+    {
+        numbersArray[0] = Number(prompt("What is the length of one side of the cube?"));   // takes the users base and puts it in the array
+    }
+    while(numbersArray[0] == " ");
 
     answer = numbersArray[0] * numbersArray[0] * numbersArray[0];  // calculates the area and puts it in answer
 }
 
 if (shape == "3") // the user chose 3 which is the trapezoid.  the if statement only does the following code if shape is equal to three.
 {
-    numbersArray[0] = Number(prompt("What is the diameter of the cylinder in inches?"));   // takes the width of the top and puts it in the array
-    numbersArray[1] = Number(prompt("What is the height of the cylinder in inches?")); // takes the width of the bottom and puts it in the array
+    do
+    {
+        numbersArray[0] = Number(prompt("What is the diameter of the cylinder in inches?"));   // takes the width of the top and puts it in the array
+    }
+    while(numbersArray[0] == " ");
+
+    do
+    {
+        numbersArray[1] = Number(prompt("What is the height of the cylinder in inches?")); // takes the width of the bottom and puts it in the array
+    }
+    while(numbersArray[1] == " ");
 
     answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/4;  // calculates the area and puts it in answer
 }
 
 if (shape == "4") // the user chose 4 which is the square.  the if statement only does the following code if shape is equal to four.
 {
-    numbersArray[0] = Number(prompt("What is the length of the rectangular prism in inches?")); // takes the length of one side of square and puts it in the array
-    numbersArray[1] = Number(prompt("What is the width of the rectangular prism in inches?"));
-    numbersArray[2] = Number(prompt("What is the height of the rectangular prism in inches?"));
+    do
+    {
+        numbersArray[0] = Number(prompt("What is the length of the rectangular prism in inches?")); // takes the length of one side of square and puts it in the array
+    }
+    while(numbersArray[0] == " ");
+    do
+    {
+        numbersArray[1] = Number(prompt("What is the width of the rectangular prism in inches?"));
+    }
+    while(numbersArray[1] == " ");
+    do
+    {
+        numbersArray[2] = Number(prompt("What is the height of the rectangular prism in inches?"));
+    }
+    while(numbersArray[2] == " ");
 
     answer = numbersArray[0] * numbersArray[1] * numbersArray[2];  // calculates the area and puts it in answer
 }
 
 if (shape == "5") // the user chose 5 which is the rectangle.  the if statement only does the following code if shape is equal to five.
 {
-    numbersArray[0] = Number(prompt("What is the diameter of the cone in inches?")); // takes the width and puts it in the array
-    numbersArray[1] = Number(prompt("What is the height of the cone in inches?")); // takes the height and puts it in the array
+    do
+    {
+        numbersArray[0] = Number(prompt("What is the diameter of the cone in inches?")); // takes the width and puts it in the array
+    }
+    while(numbersArray[0] == " ");
+    do
+    {
+        numbersArray[1] = Number(prompt("What is the height of the cone in inches?")); // takes the height and puts it in the array
+    }
+    while(numbersArray[1] == " ");
 
     answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/12;  // calculates the area and puts it in answer
 }
 
 if (shape == "6") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
-    numbersArray[0] = Number(prompt("What is the diameter of the parabolic cone in inches?")); // takes the width and puts it in the array
-    numbersArray[1] = Number(prompt("What is the height of the parabolic cone in inches?")); // takes the height and puts it in the array
+    do
+    {
+        numbersArray[0] = Number(prompt("What is the diameter of the parabolic cone in inches?")); // takes the width and puts it in the array
+    }
+    while(numbersArray[0] == " ");
+    do
+    {
+        numbersArray[1] = Number(prompt("What is the height of the parabolic cone in inches?")); // takes the height and puts it in the array
+    }
+    while(numbersArray[1] == " ");
 
     answer = 2 * pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/15;  // calculates the area and puts it in answer
-    //console
 }
 
 if (shape == "7") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
-    numbersArray[0] = Number(prompt("What is the diameter of the elliptical cone in inches?")); // takes the width and puts it in the array
-    numbersArray[1] = Number(prompt("What is the height of the elliptical cone in inches?")); // takes the height and puts it in the array
+    do
+    {
+        numbersArray[0] = Number(prompt("What is the diameter of the elliptical cone in inches?")); // takes the width and puts it in the array
+    }
+    while(numbersArray[0] == " ");
+    do
+    {
+        numbersArray[1] = Number(prompt("What is the height of the elliptical cone in inches?")); // takes the height and puts it in the array
+    }
+    while(numbersArray[1] == " ");
 
     answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/6;  // calculates the area and puts it in answer
 }
