@@ -71,19 +71,20 @@ if (shape == "5") // the user chose 5 which is the rectangle.  the if statement 
 
 if (shape == "6") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
-    numbersArray[0] = prompt("What is the radius of the semi-circle in inches?"); // takes the users radius and puts it in the array
+    numbersArray[0] = Number(prompt("What is the diameter of the parabolic cone in inches?")); // takes the width and puts it in the array
+    numbersArray[1] = Number(prompt("What is the height of the parabolic cone in inches?")); // takes the height and puts it in the array
 
-    answer = pi * (Number(numbersArray[shape - 1]) * Number(numbersArray[shape - 1]))/2; // calculates the area and puts it in answer
+    answer = 2 * pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/15;  // calculates the area and puts it in answer
     //console
 }
 
-/**if (shape == "11") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
+if (shape == "7") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
-    numbersArray[0] = prompt("What is the radius of the semi-circle in inches?"); // takes the users radius and puts it in the array
+    numbersArray[0] = Number(prompt("What is the diameter of the elliptical cone in inches?")); // takes the width and puts it in the array
+    numbersArray[1] = Number(prompt("What is the height of the elliptical cone in inches?")); // takes the height and puts it in the array
 
-    answer = pi * (Number(numbersArray[shape - 1]) * Number(numbersArray[shape - 1]))/2; // calculates the area and puts it in answer
-    //console
-}**/
+    answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/6;  // calculates the area and puts it in answer
+}
 
 console.log("The volume of a " + shapeArray[shape - 1] + " is " + answer + " inches cubed.");  // outputs a string to the console
 alert("The volume of a " + shapeArray[shape - 1] + " is " + answer + " inches cubed."); // outputs a string to the user
