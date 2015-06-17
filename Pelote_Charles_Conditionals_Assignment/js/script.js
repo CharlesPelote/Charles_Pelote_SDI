@@ -6,6 +6,9 @@
  * Assignment: Conditionals Assignment
  */
 
+//format number answers *****
+//is there a limit on the data size that can be stored in an array element *****
+
 var answer;                      // answer will hold the volume of the chosen objects.
 var numbersArray = [0, 0 ,0];    // an array to hold the numbers input by the user.
 var shapeArray = ["sphere", "cube", "cylinder", "rectangular prism", "cone", "parabolic cone", "elliptical cone"];    // an array to hold the names of the shapes.
@@ -25,13 +28,25 @@ do        // this loop will continue to run until the user enters the correct in
 
 if (shape == "1") // the user chose 1 which is the sphere.  the if statement only does the following code if shape is equal to one.
 {
-    numbersArray[0] = prompt("What is the diameter of the sphere in inches?"); // takes the users diameter and puts it in the array
-
+    do
+    {
+        numbersArray[0] = prompt("What is the diameter of the sphere in inches?"); // takes the users diameter and puts it in the array
+    }
+    while(numbersArray[0] <= -9999999999999999 || numbersArray[0] >= 999999999999999)
+alert(numbersArray[0] );
     answer = pi * Number(numbersArray[0]) * Number(numbersArray[0]) * Number(numbersArray[0])/6; // calculates the volume and puts it in answer
     console.log("The volume of a " + shapeArray[shape - 1] + " is " + answer + " inches cubed.");  // outputs a string to the console
+    alert("The volume of a " + shapeArray[shape - 1] + " is " + answer + " inches cubed.");
+    //else
+    //{
+    //    alert ("not good.");
+    //}
+    //answer = pi * Number(numbersArray[0]) * Number(numbersArray[0]) * Number(numbersArray[0])/6; // calculates the volume and puts it in answer
+    //console.log("The volume of a " + shapeArray[shape - 1] + " is " + answer + " inches cubed.");  // outputs a string to the console
+    //alert("The volume of a " + shapeArray[shape - 1] + " is " + answer + " inches cubed.");
 }
 
-if (shape == "2") // the user chose 2 which is the triangle.  the if statement only does the following code if shape is equal to two.
+/**if (shape == "2") // the user chose 2 which is the cube.  the if statement only does the following code if shape is equal to two.
 {
     numbersArray[0] = prompt("What is the base of the triangle in inches?");   // takes the users base and puts it in the array
     numbersArray[1] = prompt("What is the height of the triangle in inches?"); // takes the users height and puts it in the array
@@ -67,7 +82,7 @@ if (shape == "5") // the user chose 5 which is the rectangle.  the if statement 
     //console
 }
 
-if (shape == "1") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
+if (shape == "11") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
     numbersArray[0] = prompt("What is the radius of the semi-circle in inches?"); // takes the users radius and puts it in the array
 
@@ -75,7 +90,7 @@ if (shape == "1") // the user chose 1 which is the semi-circle.  the if statemen
     //console
 }
 
-if (shape == "1") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
+if (shape == "11") // the user chose 1 which is the semi-circle.  the if statement only does the following code if shape is equal to one.
 {
     numbersArray[0] = prompt("What is the radius of the semi-circle in inches?"); // takes the users radius and puts it in the array
 
@@ -84,4 +99,4 @@ if (shape == "1") // the user chose 1 which is the semi-circle.  the if statemen
 }
 
 //console.log("The area of a " + shapeArray[shape - 1] + " is " + answer + " inches");  // outputs a string to the console
-//alert("The area of the " + shapeArray[shape - 1] + " is " + answer + " inches squared."); // outputs a string to the user
+//alert("The area of the " + shapeArray[shape - 1] + " is " + answer + " inches squared."); // outputs a string to the user**/
