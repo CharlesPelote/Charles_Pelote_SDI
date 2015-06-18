@@ -24,6 +24,14 @@ do        // this loop will continue to run until the user enters the correct in
     {
         test = true; // when the user gets it right we set test to true and move out of the loop
     }
+    else if(shape == " ")
+    {
+        alert("Please try again. One space isn't going to cut it. You need to enter a number between 1 & 7.");
+    }
+    else
+    {
+        alert("You are just typing non-sense now. You need to enter a number between 1 & 7.");
+    }
 } while(test == false);
 
 if (shape == "1") // the user chose 1 which is the sphere.  the if statement only does the following code if shape is equal to one.
