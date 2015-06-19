@@ -8,7 +8,7 @@
 
 var pi           = 3.14;         // fixed variable pi
 var answer       = 0;            // answer will hold the volume of the chosen objects.
-var shape        = "0";          // user chooses the shape by picking a number between 1-7
+var shape        = " ";          // user chooses the shape by picking a number between 1-7
 var test         = false;        // test variable used to hold a boolean initialized to false.
 var response;                    // used to hold the final response to the user providing them with the volume.
 var numbersArray = [0, 0 ,0];    // an array to hold the numbers input by the user.
@@ -48,8 +48,6 @@ if (shape == "1") // the user chose 1 which is the sphere.  the if statement onl
     answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[0]/6; // calculates the volume and puts it in answer
 }
 
-test = false;  // reset the test variable.
-
 if (shape == "2") // the user chose 2 which is the cube.  the if statement only does the following code if shape is equal to two.
 {
     do  // this loop will continue to run until the user enters the correct information, a positive number.
@@ -59,10 +57,8 @@ if (shape == "2") // the user chose 2 which is the cube.  the if statement only 
     }
     while(test == false);  // as long as test == false the loop will repeat. when test == true then the user entered the correct information and the loop is ended.
 
-    answer = numbersArray[0] * numbersArray[0] * numbersArray[0];  // calculates the area and puts it in answer
+    answer = numbersArray[0] * numbersArray[0] * numbersArray[0];  // calculates the volume and puts it in answer
 }
-
-test = false;  // reset the test variable.
 
 if (shape == "3") // the user chose 3 which is the cylinder.  the if statement only does the following code if shape is equal to three.
 {
@@ -82,10 +78,8 @@ if (shape == "3") // the user chose 3 which is the cylinder.  the if statement o
     }
     while(test == false);  // as long as test == false the loop will repeat. when test == true then the user entered the correct information and the loop is ended.
 
-    answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/4;  // calculates the area and puts it in answer
+    answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/4;  // calculates the volume and puts it in answer
 }
-
-test = false;  // reset the test variable.
 
 if (shape == "4") // the user chose 4 which is the rectangular prism.  the if statement only does the following code if shape is equal to four.
 {
@@ -114,10 +108,8 @@ if (shape == "4") // the user chose 4 which is the rectangular prism.  the if st
     }
     while(test == false);  // as long as test == false the loop will repeat. when test == true then the user entered the correct information and the loop is ended.
 
-    answer = numbersArray[0] * numbersArray[1] * numbersArray[2];  // calculates the area and puts it in answer
+    answer = numbersArray[0] * numbersArray[1] * numbersArray[2];  // calculates the volume and puts it in answer
 }
-
-test = false;  // reset the test variable.
 
 if (shape == "5") // the user chose 5 which is the cone.  the if statement only does the following code if shape is equal to five.
 {
@@ -137,10 +129,8 @@ if (shape == "5") // the user chose 5 which is the cone.  the if statement only 
     }
     while(test == false);  // as long as test == false the loop will repeat. when test == true then the user entered the correct information and the loop is ended.
 
-    answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/12;  // calculates the area and puts it in answer
+    answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/12;  // calculates the volume and puts it in answer
 }
-
-test = false;  // reset the test variable.
 
 if (shape == "6") // the user chose 6 which is the parabolic cone.  the if statement only does the following code if shape is equal to six.
 {
@@ -160,10 +150,8 @@ if (shape == "6") // the user chose 6 which is the parabolic cone.  the if state
     }
     while(test == false);  // as long as test == false the loop will repeat. when test == true then the user entered the correct information and the loop is ended.
 
-    answer = 2 * pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/15;  // calculates the area and puts it in answer
+    answer = 2 * pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/15;  // calculates the volume and puts it in answer
 }
-
-test = false;  // reset the test variable.
 
 if (shape == "7") // the user chose 7 which is the elliptical cone.  the if statement only does the following code if shape is equal to seven.
 {
@@ -183,11 +171,11 @@ if (shape == "7") // the user chose 7 which is the elliptical cone.  the if stat
     }
     while(test == false);  // as long as test == false the loop will repeat. when test == true then the user entered the correct information and the loop is ended.
 
-    answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/6;  // calculates the area and puts it in answer
+    answer = pi * numbersArray[0] * numbersArray[0] * numbersArray[1]/6;  // calculates the volume and puts it in answer
 }
 
 answer = answer.toFixed(2); // the number within answer is rounded to two decimal places.
-                            // ternary conditioanl statement that performs a final validation for the correct input to ensure a positive number will be displayed. 
+                            // ternary conditioanl statement that performs a final validation for the correct input to ensure a positive number will be displayed.
 response = (answer <= 0) ? "Something went wrong." : "The volume of your " + shapeArray[shape - 1] + " is " + answer + " inches cubed.";
 console.log(response);  // outputs a string to the console
 alert(response);        // outputs a string to the user
