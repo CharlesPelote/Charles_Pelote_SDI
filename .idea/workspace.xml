@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f2cd6c9-0023-4a2f-8842-945b9da4d73f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pelote_Charles_Functions_Assignment/js/script.js" afterPath="$PROJECT_DIR$/Pelote_Charles_Functions_Assignment/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Charles_Pelote_SDI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/Pelote_Charles_Functions_Assignment/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.92727274">
-              <caret line="110" column="50" selection-start-line="110" selection-start-column="50" selection-end-line="110" selection-end-column="50" />
+              <caret line="113" column="84" selection-start-line="113" selection-start-column="84" selection-end-line="113" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -367,7 +368,7 @@
     <entry file="file://$PROJECT_DIR$/Pelote_Charles_Functions_Assignment/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.92727274">
-          <caret line="110" column="50" selection-start-line="110" selection-start-column="50" selection-end-line="110" selection-end-column="50" />
+          <caret line="113" column="84" selection-start-line="113" selection-start-column="84" selection-end-line="113" selection-end-column="84" />
           <folding />
         </state>
       </provider>
