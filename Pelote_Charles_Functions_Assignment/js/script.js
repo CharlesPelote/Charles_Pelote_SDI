@@ -74,12 +74,26 @@ if(returnLottery == "Florida lottery")
     for (var cnt = 0; cnt <= randomCount - 1; cnt++)
     {
         randomNumberArray[cnt] = randomizer(min, max);
+        for(var i = 0; i <= cnt - 1; i++)
+        {
+            console.log("i = " + i);
+            if(areTheSame(randomNumberArray[cnt], randomNumberArray[i]))
+            {
+                console.log("its true!!!!  random = " + randomNumberArray[cnt] + " array = " + randomNumberArray[i] + " at element " + i);
+                randomNumberArray[cnt] = randomizer(min, max);
+                console.log("AGAIN!!!");
+                i = 0;
+            }
+
+        }
+
 
         magicNumbers = magicNumbers + " " + randomNumberArray[cnt] + " "; // magicNumbers += " " + etc
     }
-    console.log("entering dupt chck loop " + randomNumberArray[0]);
+    /**console.log("entering dupt chck loop " + randomNumberArray[0]);
     for(var i = 0; i <= randomCount - 1; i++)
     {
+        console.log("in loop 1");
         for(var k = 0; k <= randomCount - 1; k++)
         {
             if(i == k)
