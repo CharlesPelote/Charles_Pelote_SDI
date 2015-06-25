@@ -12,24 +12,20 @@ var min = 0;
 var max = 0;
 var minPB = 0;
 var maxPB = 0;
-var randomNumberArray = [];
-var randomCount = 0;
-var magicNumbers = " ";
-var returnLottery;
 var powerBall = 0;
 var loop1Cntr = 0;
 var loop2Cntr = 0;
-//var number1 = 0;
-//var number2 = 0;
-//var same = false;
-//var tempRandomNumber = 0;
+var returnLottery;
+var magicNumbers = " ";
+var randomNumberCount = 0;
+var randomNumberArray = [];
 
 // FUNCTIONS
 
 function whichLottery()
 {
-    var test = true;
     var lottery;
+    var test = true;
     var lotteryArray = ["Florida lottery", "Powerball lottery"];
 
     while(test == true)
@@ -57,7 +53,6 @@ function areTheSame(num1, num2)
     {
         sameNum = true;
     }
-
     return sameNum;
 }  // end areTheSame
 
@@ -69,7 +64,7 @@ if(returnLottery == "Florida lottery")
 {
     min = 1;
     max = 53;
-    randomNumberCount = 6;  //randomNumberCount
+    randomNumberCount = 6;
 
     for (loop1Cntr = 0; loop1Cntr <= randomNumberCount - 1; loop1Cntr++)
     {
@@ -83,8 +78,6 @@ if(returnLottery == "Florida lottery")
             }
 
         }
-
-
         magicNumbers = magicNumbers + " " + randomNumberArray[loop1Cntr] + " "; // magicNumbers += " " + etc
     }
     console.log("your magic numbers for the " + returnLottery + " are ...." + " " + magicNumbers);
@@ -96,9 +89,9 @@ if(returnLottery == "Powerball lottery")
     max = 59;
     minPB = 1;
     maxPB = 35;
-    randomCount = 5;
+    randomNumberCount = 5;
 
-    for (loop1Cntr = 0; loop1Cntr <= randomCount - 1; loop1Cntr++)
+    for (loop1Cntr = 0; loop1Cntr <= randomNumberCount - 1; loop1Cntr++)
     {
         randomNumberArray[loop1Cntr] = randomizer(min, max);
         for(loop2Cntr = 0; loop2Cntr <= loop1Cntr - 1; loop2Cntr++)
@@ -108,7 +101,6 @@ if(returnLottery == "Powerball lottery")
                 randomNumberArray[loop1Cntr] = randomizer(min, max);
                 loop2Cntr = 0;
             }
-
         }
         magicNumbers = magicNumbers + " " + randomNumberArray[loop1Cntr] + " ";
     }
@@ -117,4 +109,3 @@ if(returnLottery == "Powerball lottery")
     console.log("\n and your Powerball is .... " + powerBall);
 }
 console.log("\nthis is it !!!  " + returnLottery);
-
