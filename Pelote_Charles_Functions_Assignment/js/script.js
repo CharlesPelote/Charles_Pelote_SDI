@@ -17,6 +17,8 @@ var randomCount = 0;
 var magicNumbers = " ";
 var returnLottery;
 var powerBall = 0;
+var loop1Cntr = 0;
+var loop2Cntr = 0;
 //var number1 = 0;
 //var number2 = 0;
 //var same = false;
@@ -57,7 +59,7 @@ function areTheSame(num1, num2)
     }
 
     return sameNum;
-}
+}  // end areTheSame
 
 // MAIN()
 
@@ -67,23 +69,23 @@ if(returnLottery == "Florida lottery")
 {
     min = 1;
     max = 53;
-    randomCount = 6;  //randomNumberCount
+    randomNumberCount = 6;  //randomNumberCount
 
-    for (var cnt = 0; cnt <= randomCount - 1; cnt++)
+    for (loop1Cntr = 0; loop1Cntr <= randomNumberCount - 1; loop1Cntr++)
     {
-        randomNumberArray[cnt] = randomizer(min, max);
-        for(var i = 0; i <= cnt - 1; i++)
+        randomNumberArray[loop1Cntr] = randomizer(min, max);
+        for(loop2Cntr = 0; loop2Cntr <= loop1Cntr - 1; loop2Cntr++)
         {
-            if(areTheSame(randomNumberArray[cnt], randomNumberArray[i]))
+            if(areTheSame(randomNumberArray[loop1Cntr], randomNumberArray[loop2Cntr]))
             {
-                randomNumberArray[cnt] = randomizer(min, max);
-                i = 0;
+                randomNumberArray[loop1Cntr] = randomizer(min, max);
+                loop2Cntr = 0;
             }
 
         }
 
 
-        magicNumbers = magicNumbers + " " + randomNumberArray[cnt] + " "; // magicNumbers += " " + etc
+        magicNumbers = magicNumbers + " " + randomNumberArray[loop1Cntr] + " "; // magicNumbers += " " + etc
     }
     console.log("your magic numbers for the " + returnLottery + " are ...." + " " + magicNumbers);
 }
@@ -96,19 +98,19 @@ if(returnLottery == "Powerball lottery")
     maxPB = 35;
     randomCount = 5;
 
-    for (var cnt = 0; cnt <= randomCount - 1; cnt++)
+    for (loop1Cntr = 0; loop1Cntr <= randomCount - 1; loop1Cntr++)
     {
-        randomNumberArray[cnt] = randomizer(min, max);
-        for(var i = 0; i <= cnt - 1; i++)
+        randomNumberArray[loop1Cntr] = randomizer(min, max);
+        for(loop2Cntr = 0; loop2Cntr <= loop1Cntr - 1; loop2Cntr++)
         {
-            if(areTheSame(randomNumberArray[cnt], randomNumberArray[i]))
+            if(areTheSame(randomNumberArray[loop1Cntr], randomNumberArray[loop2Cntr]))
             {
-                randomNumberArray[cnt] = randomizer(min, max);
-                i = 0;
+                randomNumberArray[loop1Cntr] = randomizer(min, max);
+                loop2Cntr = 0;
             }
 
         }
-        magicNumbers = magicNumbers + " " + randomNumberArray[cnt] + " ";
+        magicNumbers = magicNumbers + " " + randomNumberArray[loop1Cntr] + " ";
     }
     console.log("your magic numbers for the " + returnLottery + " are ...." + " " + magicNumbers);
     powerBall = randomizer(minPB, maxPB);
