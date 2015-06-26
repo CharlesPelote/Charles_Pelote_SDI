@@ -114,6 +114,6 @@ if(returnLottery == "Powerball lottery")                                 // if t
 
     luckyNumbers = lotteryDrawing(min, max, randomNumberCount, randomNumberArray, returnLottery); // var will hold the lottery numbers
     winningDeclaration(lotteryString1, lotteryString2, returnLottery, luckyNumbers);              // a string is sent to the console with the powerball numbers and the lottery chosen
-    powerballDrawing(minPB, maxPB, powerballString);                                              // a string is sent to the console with the powerbal number
+    powerballDrawing(minPB, maxPB, powerballString);                                              // a string is sent to the console with the powerball number
 }
 
