@@ -18,7 +18,7 @@ var randomNumberCount = 0;                           // how many numbers need to
 var randomNumberArray = [];                          // will hold the random lottery numbers
 var lotteryString2 = " are ..... ";                  // output for user
 var lotteryString1 = "Your magic numbers for the ";  // output for user
-var powerballString = "and you Powerball is ..... "; // output for user
+var powerballString = "and your Powerball is ..... "; // output for user
 
 // FUNCTIONS
 
@@ -65,6 +65,7 @@ function powerballDrawing(min, max, string)                              // this
 {
     var powerBall = randomizer(min, max);                                // var to hold the random powerball number
     console.log(string + powerBall);                                     // will display powerball number to user
+    return 0;
 } // end powerballDrawing()
 
 function randomizer(minNum, maxNum)                                      // this function will generate a random number
@@ -86,6 +87,7 @@ function areTheSame(num1, num2)                                          // this
 function winningDeclaration(line1, line2, lottery, winningNumbers)       // this function will output the winning numbers to the user
 {
     console.log(line1 + lottery + line2 + winningNumbers);               // a concatenated string is out together for the user
+    return 0;
 } // end winningDeclaration()
 
 // MAIN()
@@ -114,3 +116,4 @@ if(returnLottery == "Powerball lottery")                                 // if t
     winningDeclaration(lotteryString1, lotteryString2, returnLottery, luckyNumbers);              // a string is sent to the console with the powerball numbers and the lottery chosen
     powerballDrawing(minPB, maxPB, powerballString);                                              // a string is sent to the console with the powerbal number
 }
+
